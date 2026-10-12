@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MM Elec Services · Électricien à Angers</title>
+<meta name="description" content="MM Elec Services, électricien à Angers : installation neuve, rénovation, tableau électrique et dépannage.">
+<meta name="theme-color" content="#1D2124">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%231D2124%27/%3E%3Cpath%20d%3D%27M10%2048V16l11%2018%2011-18v32M32%2048V16l11%2018%2011-18v32%27%20fill%3D%27none%27%20stroke%3D%27%2312B76A%27%20stroke-width%3D%276%27%20stroke-linejoin%3D%27round%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+img{height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+.icone{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- Bandeau démo MJ ---------- */
+.bandeau-demo{background:#0F5C6E;color:#fff;font:500 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;
+  display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;padding:9px 16px;text-align:center}
+.bandeau-demo strong{font-weight:700}
+.bandeau-demo a{color:#FFD3A8;font-weight:700;text-decoration:none;white-space:nowrap}
+.bouton-pourquoi{background:#F28C28;color:#1b1b1b;border:0;border-radius:999px;padding:7px 14px;font:700 13px system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.bouton-pourquoi:focus-visible{outline:3px solid #fff;outline-offset:2px}
+body.mode-presentation .bouton-pourquoi{background:#fff}
+@media (max-width:600px){.bandeau-demo{font-size:12.5px;padding:8px 12px}.bandeau-demo .cache-mobile{display:none}}
+
+/* ---------- Bulles d'arguments (mode présentation) ---------- */
+.argument{display:none;position:relative;z-index:5;max-width:560px;margin:18px 0 0;padding:14px 16px 14px 46px;
+  background:#FFF7EE;color:#2a2a2a;border:2px solid #F28C28;border-radius:14px;text-align:left;
+  font:400 15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.argument::before{content:"MJ";position:absolute;left:10px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:#0F5C6E;color:#fff;font:800 10px/26px system-ui,sans-serif;text-align:center}
+.argument b{color:#0F5C6E}
+body.mode-presentation .argument{display:block;animation:apparait .35s ease}
+@keyframes apparait{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ---------- Infos à compléter ---------- */
+.a-completer{font-style:italic;opacity:.7}
+.etiquette-completer{display:inline-block;font:600 10.5px/1 system-ui,sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;border:1px solid currentColor;opacity:.6;padding:3px 6px;border-radius:4px;vertical-align:middle}
+
+/* ---------- Dessins en trait fin ---------- */
+.section-dessinee{position:relative;isolation:isolate}
+.dessin{position:absolute;z-index:-1;fill:none;stroke-width:1.4;opacity:.4;pointer-events:none}
+.dessin *{vector-effect:non-scaling-stroke}
+@media (max-width:600px){.cache-mobile{display:none}}
+
+/* ---------- En-tête collant + navigation ---------- */
+.entete{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.nav-principale{display:flex;gap:28px;font:500 15px var(--police-texte)}
+.nav-principale a{text-decoration:none;opacity:.78;transition:opacity .2s}
+.nav-principale a:hover{opacity:1}
+.entete-droite{display:flex;align-items:center;gap:18px}
+.tel-entete{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;text-decoration:none;font:600 15px var(--police-texte)}
+.tel-entete small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.65;font-weight:500}
+@media (max-width:1060px){.nav-principale{display:none}}
+@media (max-width:760px){.tel-entete{display:none}}
+
+/* ---------- Apparition au défilement ---------- */
+.js .revele{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .revele.vu{opacity:1;transform:none}
+
+/* ---------- Barre de confiance ---------- */
+.confiance{position:relative;z-index:3;margin-top:-38px}
+.confiance-grille{display:grid;grid-template-columns:repeat(4,1fr);background:var(--theme-carte);color:var(--theme-texte);
+  border-radius:var(--theme-rayon);box-shadow:0 24px 50px -28px rgba(0,0,0,.45);border:1px solid var(--theme-trait);overflow:hidden}
+.confiance-item{display:flex;gap:14px;align-items:flex-start;padding:22px 22px}
+.confiance-item+.confiance-item{border-left:1px solid var(--theme-trait)}
+.confiance-item .icone{width:30px;height:30px;color:var(--theme-accent-icone,var(--theme-accent))}
+.confiance-item strong{display:block;font:700 16px/1.25 var(--police-titre)}
+.confiance-item span{display:block;font:400 14px/1.4 var(--police-texte);color:var(--theme-doux);margin-top:3px}
+@media (max-width:960px){.confiance-grille{grid-template-columns:1fr 1fr}.confiance-item:nth-child(3){border-left:0}
+  .confiance-item:nth-child(n+3){border-top:1px solid var(--theme-trait)}}
+@media (max-width:600px){.confiance{margin-top:-24px}.confiance-item{padding:16px 14px;gap:10px}.confiance-item .icone{width:24px;height:24px}
+  .confiance-item strong{font-size:14.5px}.confiance-item span{font-size:13px}}
+
+/* ---------- FAQ ---------- */
+.faq{padding:88px 0;background:var(--theme-fond);color:var(--theme-texte)}
+.faq .conteneur{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.faq h2{font-family:var(--police-titre)}
+.faq-liste details{border-bottom:1px solid var(--theme-trait)}
+.faq-liste details:first-child{border-top:1px solid var(--theme-trait)}
+.faq-liste summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;
+  padding:20px 2px;font:600 18px/1.35 var(--police-titre)}
+.faq-liste summary::-webkit-details-marker{display:none}
+.faq-liste summary::after{content:"";width:12px;height:12px;flex:none;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translateY(-3px);transition:transform .25s;opacity:.6}
+.faq-liste details[open] summary::after{transform:rotate(-135deg)}
+.faq-liste details p{margin:0 0 22px;color:var(--theme-doux);font:400 16.5px/1.65 var(--police-texte);max-width:60ch}
+@media (max-width:960px){.faq .conteneur{grid-template-columns:1fr;gap:20px}}
+
+/* ---------- Devis / contact ---------- */
+.devis{padding:92px 0;background:var(--theme-sombre);color:var(--theme-sur-sombre)}
+.devis .conteneur{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.devis h2{font-family:var(--police-titre);color:var(--theme-sur-sombre)}
+.devis .intro{opacity:.82;max-width:34em;margin:16px 0 28px;font-size:18px}
+.coordonnees{display:grid;gap:4px;margin:0 0 26px;padding:0;list-style:none}
+.coordonnees li{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);font:500 16px var(--police-texte)}
+.coordonnees .icone{color:var(--theme-accent-icone-sombre,var(--theme-accent))}
+.coordonnees .a-completer{display:inline-block;margin-top:6px}
+.coordonnees small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.formulaire{background:var(--theme-carte);color:var(--theme-texte);border-radius:var(--theme-rayon);padding:32px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.formulaire h3{font:700 22px/1.2 var(--police-titre);margin:0 0 4px}
+.formulaire .sous-titre{margin:0 0 22px;color:var(--theme-doux);font-size:15px}
+.formulaire-grille{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.formulaire label{display:grid;gap:6px;font:600 14px var(--police-texte)}
+.formulaire .pleine{grid-column:1/-1}
+.formulaire input,.formulaire select,.formulaire textarea{width:100%;padding:13px 14px;border:1.5px solid var(--theme-trait);border-radius:calc(var(--theme-rayon)*.5);
+  background:var(--theme-champ,#fff);color:var(--theme-texte);font:400 16px var(--police-texte)}
+.formulaire textarea{min-height:110px;resize:vertical}
+.formulaire input:focus,.formulaire select:focus,.formulaire textarea:focus{outline:none;border-color:var(--theme-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--theme-accent) 22%,transparent)}
+.bouton-envoyer{margin-top:18px;width:100%;justify-content:center;border:0;cursor:pointer;padding:16px 22px;border-radius:calc(var(--theme-rayon)*.5);
+  background:var(--theme-accent);color:var(--theme-sur-accent);font:700 17px var(--police-texte);display:flex;gap:10px;align-items:center}
+.bouton-envoyer:hover{filter:brightness(1.06)}
+.mention-form{font-size:12.5px;color:var(--theme-doux);margin:12px 0 0}
+.confirmation{display:none;text-align:center;padding:30px 10px}
+.confirmation .coche{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:var(--theme-accent);color:var(--theme-sur-accent);font-size:30px}
+.formulaire.envoye form{display:none}.formulaire.envoye .confirmation{display:block}
+@media (max-width:960px){.devis .conteneur{grid-template-columns:1fr;gap:34px}}
+@media (max-width:600px){.formulaire{padding:22px}.formulaire-grille{grid-template-columns:1fr}}
+
+/* ---------- Pied de page complet ---------- */
+.pied{background:var(--theme-sombre);color:var(--theme-sur-sombre);border-top:1px solid rgba(255,255,255,.1);padding:56px 0 0;font:400 15px/1.6 var(--police-texte)}
+.pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.pied h4{font:600 12px/1 var(--police-texte);letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin:0 0 16px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;opacity:.85}.pied a:hover{opacity:1}
+.pied .nom-pied{font:700 22px/1.1 var(--police-titre);margin:0 0 10px}
+.pied p{margin:0;opacity:.7;max-width:30em}
+.pied-bas{margin-top:44px;padding:18px 0 26px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;font-size:13px;opacity:.65}
+.pied-bas a{font-weight:600}
+@media (max-width:760px){.pied-grille{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- Encart offre MJ (démo) ---------- */
+.offre-mj{background:#0B3F4C;color:#fff;padding:72px 0;font:400 17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;overflow:hidden}
+.offre-mj::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,140,40,.28),transparent 65%)}
+.offre-mj .conteneur-mj{width:min(1100px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.offre-mj .etiquette{display:inline-block;background:#F28C28;color:#1b1b1b;font:800 12px/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.offre-mj h2{text-transform:none;font-stretch:normal;color:#fff;font:800 clamp(28px,3.8vw,42px)/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;margin:16px 0 14px;letter-spacing:-.01em}
+.offre-mj p{margin:0 0 12px;color:#cfe3e8}
+.offre-mj .inclus{list-style:none;margin:0;padding:24px;display:grid;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px}
+.offre-mj .inclus li{display:flex;gap:12px;align-items:flex-start}
+.offre-mj .inclus li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:#F28C28;color:#1b1b1b;font:800 13px/24px system-ui;text-align:center}
+.offre-mj .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.offre-mj .actions a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font:700 16px system-ui,sans-serif;padding:14px 20px;border-radius:999px}
+.offre-mj .actions .principal{background:#F28C28;color:#1b1b1b}
+.offre-mj .actions .secondaire{border:2px solid rgba(255,255,255,.35);color:#fff}
+.offre-mj .signature{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;color:#cfe3e8}
+.offre-mj .signature span:first-child{width:40px;height:40px;border-radius:50%;background:#0F5C6E;border:2px solid #F28C28;display:grid;place-items:center;font:800 13px system-ui;color:#fff}
+.offre-mj .conteneur-mj>*{min-width:0}
+@media (max-width:860px){.offre-mj .conteneur-mj{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- Barre d'appel mobile ---------- */
+.barre-mobile{display:none}
+@media (max-width:600px){
+  body{padding-bottom:72px}
+  .barre-mobile{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:var(--theme-carte);border-top:1px solid var(--theme-trait);box-shadow:0 -10px 30px -12px rgba(0,0,0,.35)}
+  .barre-mobile a{display:flex;gap:8px;justify-content:center;align-items:center;text-decoration:none;font:700 15px var(--police-texte);padding:13px;border-radius:calc(var(--theme-rayon)*.5)}
+  .barre-mobile .appel{background:var(--theme-accent);color:var(--theme-sur-accent)}
+  .barre-mobile .devis-lien{background:var(--theme-sombre);color:var(--theme-sur-sombre)}
+  .barre-mobile .icone{width:18px;height:18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .revele{opacity:1;transform:none}}
+
+
+:root{--theme-fond:#fff;--theme-carte:#fff;--theme-texte:#1D2124;--theme-doux:#5d646a;--theme-accent:#12B76A;--theme-sur-accent:#06281A;
+  --theme-sombre:#1D2124;--theme-sur-sombre:#F2F4F1;--theme-trait:#DDE1DC;--theme-rayon:16px;--theme-accent-icone:#0A8A4F}
+.devis .surtitre{color:#12B76A}.devis .surtitre::before{background:#12B76A}
+:root{
+  --blanc:#FAFBF8; --graphite:#1D2124; --graphite-2:#2B3034; --vert:#12B76A; --vert-fonce:#0A8A4F; --vert-pale:#E3F6EC;
+  --gris:#6B7278; --trait:#DDE1DC;
+  --police-titre:"Sora",system-ui,sans-serif; --police-texte:"DM Sans",system-ui,sans-serif;
+}
+body{background:var(--blanc);color:var(--graphite);font:400 17px/1.6 var(--police-texte)}
+.conteneur{width:min(1120px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--police-titre);margin:0;line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:700}
+.surtitre{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--police-texte);letter-spacing:.12em;text-transform:uppercase;color:var(--vert-fonce);margin:0 0 14px}
+.surtitre::before{content:"";width:18px;height:2px;background:var(--vert)}
+
+.entete{border-bottom:1px solid var(--trait);background:rgba(250,251,248,.9)}
+.entete .conteneur{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+.marque{display:flex;gap:10px;align-items:center;text-decoration:none;font:700 20px/1 var(--police-titre)}
+.marque svg{width:38px;height:38px}
+.marque span em{font-style:normal;color:var(--vert-fonce)}
+
+.nav a{text-decoration:none;color:var(--gris)} .nav a:hover{color:var(--graphite)}
+.bouton{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font:600 16px/1 var(--police-texte);padding:14px 20px;border-radius:10px;
+  background:var(--graphite);color:#fff;border:2px solid var(--graphite);cursor:pointer}
+.bouton.vert{background:var(--vert);border-color:var(--vert);color:#06281A}
+.bouton.contour{background:transparent;color:var(--graphite)}
+.bouton:hover{transform:translateY(-1px)}
+
+/* Accueil : monogramme parcouru par le courant */
+.accueil{padding:60px 0 110px}
+.accueil .conteneur{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.accueil h1{font-size:clamp(40px,6vw,72px);font-weight:800}
+.accueil h1 .souligne{background:linear-gradient(transparent 62%,var(--vert-pale) 62% 92%,transparent 92%)}
+.accueil p{font-size:19px;color:#454b50;max-width:31em;margin:20px 0 28px}
+.boutons{display:flex;gap:12px;flex-wrap:wrap}
+.monogramme{background:var(--graphite);border-radius:28px;padding:34px;aspect-ratio:1;width:100%;max-width:440px;margin-left:auto;display:grid;place-items:center;position:relative;overflow:hidden}
+.monogramme::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(18,183,106,.25),transparent 60%)}
+.monogramme svg{width:100%;position:relative}
+.monogramme .socle{fill:none;stroke:#3a4146;stroke-width:14;stroke-linejoin:round;stroke-linecap:round}
+.monogramme .courant{fill:none;stroke:var(--vert);stroke-width:14;stroke-linejoin:round;stroke-linecap:round;
+  stroke-dasharray:60 540;animation:courant 3.2s linear infinite;filter:drop-shadow(0 0 8px rgba(18,183,106,.8))}
+@keyframes courant{to{stroke-dashoffset:-600}}
+.monogramme .legende{position:absolute;bottom:18px;left:22px;right:22px;display:flex;justify-content:space-between;color:#9aa3a8;font:500 12px var(--police-texte);letter-spacing:.1em;text-transform:uppercase}
+.preuves{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:15px;color:var(--gris)}
+.preuves span::before{content:"✓";color:var(--vert-fonce);font-weight:700;margin-right:6px}
+
+/* Prestations en liste */
+.prestations{padding:72px 0;background:#fff;border-block:1px solid var(--trait)}
+.liste{margin-top:30px;border-top:1px solid var(--trait)}
+.ligne-prestation{display:grid;grid-template-columns:70px 1fr 1.3fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--trait);align-items:baseline}
+.ligne-prestation .num{font:700 15px var(--police-titre);color:var(--vert-fonce)}
+.ligne-prestation h3{font-size:22px}
+.ligne-prestation p{margin:0;color:#4b5156}
+
+/* Calculateur norme */
+.norme{padding:76px 0}
+.norme .conteneur{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.pieces{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0 18px}
+.pieces button{all:unset;cursor:pointer;text-align:center;padding:14px 8px;border-radius:12px;border:1.5px solid var(--trait);background:#fff;font-weight:600;font-size:15px}
+.icone-piece{display:block;width:28px;height:28px;margin:0 auto 6px;fill:none;stroke:var(--graphite);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pieces button[aria-pressed=true] .icone-piece{stroke:var(--vert-fonce)}
+.pieces button[aria-pressed=true]{border-color:var(--vert);background:var(--vert-pale)}
+.pieces button:focus-visible{outline:2px solid var(--vert)}
+.curseur{display:grid;gap:8px;font-weight:600}
+.curseur input{width:100%;accent-color:var(--vert)}
+.tableau-norme{background:var(--graphite);color:#fff;border-radius:22px;padding:28px}
+.compteurs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.compteur{background:var(--graphite-2);border-radius:14px;padding:16px}
+.compteur .valeur{font:800 46px/1 var(--police-titre);color:var(--vert)}
+.compteur .nom{font-size:14px;color:#aab2b7;margin-top:6px}
+.tableau-norme ul{margin:0;padding-left:18px;color:#d3d8db}
+.tableau-norme li{margin:6px 0}
+.tableau-norme small{display:block;margin-top:14px;color:#8c959a;font-size:13px}
+
+/* Contact */
+.contact{padding:76px 0;background:var(--vert);color:#06281A}
+.contact .conteneur{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.contact .surtitre{color:#06281A}.contact .surtitre::before{background:#06281A}
+.fiche{background:#fff;border-radius:20px;padding:26px;display:grid;gap:12px;color:var(--graphite)}
+.fiche div{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.fiche b{min-width:110px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris)}
+.pied-mj{background:var(--graphite);color:#aab2b7}
+
+.dessin{stroke:var(--vert-fonce)}
+
+@media (max-width:960px){
+  .accueil .conteneur,.norme .conteneur,.contact .conteneur{grid-template-columns:1fr}
+  .monogramme{margin:0 auto;max-width:360px}
+  .ligne-prestation{grid-template-columns:50px 1fr}
+  .ligne-prestation p{grid-column:2}
+}
+@media (max-width:600px){
+  .pieces{grid-template-columns:repeat(2,1fr)}
+  .marque{font-size:18px}
+}
+</style>
+</head>
+<body>
+<div class="bandeau-demo" role="note">
+  <span>Maquette préparée pour <strong>MM Elec Services</strong> par MJ Solution Informatique<span class="cache-mobile">. Pas encore en ligne</span>.</span>
+  <a href="tel:+33761818353">Ce site vous plaît ? 07 61 81 83 53</a>
+  <button class="bouton-pourquoi" type="button" aria-pressed="false">Pourquoi ce site ?</button>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="dessin-gaine" viewBox="0 0 200 60"><path d="M2 30c20-26 40 26 60 0s40 26 60 0 40 26 60 0 16 0 16 0"/><path d="M2 38c20-26 40 26 60 0s40 26 60 0 40 26 60 0"/></symbol>
+  <symbol id="dessin-multimetre" viewBox="0 0 60 90"><rect x="4" y="4" width="52" height="82" rx="8"/><rect x="12" y="12" width="36" height="20" rx="3"/><circle cx="30" cy="54" r="12"/><path d="M30 54l7-7"/><circle cx="18" cy="78" r="3"/><circle cx="42" cy="78" r="3"/></symbol>
+  <symbol id="dessin-disjoncteur" viewBox="0 0 40 70"><rect x="4" y="4" width="32" height="62" rx="4"/><rect x="13" y="20" width="14" height="22" rx="2"/><path d="M13 31h14M4 54h32"/></symbol>
+</svg>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#haut" aria-label="MM Elec Services, accueil">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#1D2124"/><path d="M10 48V16l11 18 11-18v32M32 48V16l11 18 11-18v32" fill="none" stroke="#12B76A" stroke-width="6" stroke-linejoin="round"/></svg>
+      <span>MM <em>Elec</em> Services</span>
+    </a>
+    <nav class="nav-principale" aria-label="Menu"><a href="#prestations">Prestations</a><a href="#norme">Norme</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+    <div class="entete-droite"><a class="tel-entete" href="#contact"><small>Appel direct</small><span>Votre numéro ici</span></a>
+    <a class="bouton vert" href="#contact"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Appeler</a></div>
+  </div>
+</header>
+
+<main id="haut">
+<section class="accueil section-dessinee">
+  <svg class="dessin cache-mobile" style="width:220px;bottom:8px;right:40px"><use href="#dessin-gaine"/></svg>
+  <div class="conteneur">
+    <div>
+      <p class="surtitre">Électricien à Angers</p>
+      <h1>Votre installation électrique, <span class="souligne">faite proprement.</span></h1>
+      <p>Installation, rénovation et dépannage électrique pour les logements et les locaux, à Angers et dans les environs.</p>
+      <div class="boutons">
+        <a class="bouton" href="#formulaire-devis">Demander un devis</a>
+        <a class="bouton contour" href="#norme">Combien de prises&nbsp;?</a>
+      </div>
+      <div class="preuves"><span>Société immatriculée au RCS d'Angers</span><span>Logements et locaux</span></div>
+      <div class="argument"><b>Une vraie société, ça rassure.</b> Le client qui hésite entre deux électriciens choisit celui qui a l'air sérieux. Votre monogramme MM à droite devient votre marque : on le retrouvera sur votre fiche Google, vos devis, votre camion si un jour vous le floquez.</div>
+    </div>
+    <div class="monogramme" aria-hidden="true">
+      <svg viewBox="0 0 240 160">
+        <path class="socle" d="M14 146V14l52 82 52-82v132M122 146V14l52 82 52-82v132"/>
+        <path class="courant" d="M14 146V14l52 82 52-82v132M122 146V14l52 82 52-82v132"/>
+      </svg>
+      <div class="legende"><span>MM Elec</span><span>Services</span></div>
+    </div>
+  </div>
+</section>
+<section class="confiance" aria-label="En bref"><div class="conteneur"><div class="confiance-grille revele"><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 2.2 3.2-.4.7 3.2 2.8 1.6-1.4 2.9 1.4 2.9-2.8 1.6-.7 3.2-3.2-.4L12 21l-2.4-2.2-3.2.4-.7-3.2-2.8-1.6L4.3 11.5 2.9 8.6l2.8-1.6.7-3.2 3.2.4z"/><path d="m8.5 11.5 2.3 2.3 4.7-4.7"/></svg><div><strong>Société immatriculée</strong><span>EURL inscrite au RCS d'Angers</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg><div><strong>Tous types de locaux</strong><span>Logements, commerces, bureaux</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 16h6"/></svg><div><strong>Devis détaillé</strong><span>Avant le début des travaux</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Angers et environs</strong><span>Déplacement sur chantier</span></div></div></div></div></section>
+
+
+<section class="prestations section-dessinee" id="prestations">
+  <svg class="dessin cache-mobile" style="width:56px;top:40px;right:40px"><use href="#dessin-multimetre"/></svg>
+  <div class="conteneur">
+    <p class="surtitre">Prestations</p>
+    <h2>Du simple point lumineux à l'installation complète</h2>
+    <div class="liste">
+      <div class="ligne-prestation"><span class="num">01</span><h3>Installation neuve</h3><p>Maison, extension, local professionnel : tableau, circuits, prises et éclairage, en suivant la norme NF C 15-100.</p></div>
+      <div class="ligne-prestation"><span class="num">02</span><h3>Rénovation</h3><p>Reprise d'une installation ancienne, pièce par pièce ou sur tout le logement, en limitant les saignées.</p></div>
+      <div class="ligne-prestation"><span class="num">03</span><h3>Tableau électrique</h3><p>Remplacement, ajout de disjoncteurs et de protections différentielles, repérage clair des circuits.</p></div>
+      <div class="ligne-prestation"><span class="num">04</span><h3>Dépannage</h3><p>Recherche de panne et réparation : disjoncteur qui saute, circuit coupé, prise ou lumière hors service.</p></div>
+      <div class="ligne-prestation"><span class="num">05</span><h3>Équipements</h3><p>Circuits dédiés pour plaque, four, borne de recharge, chauffe-eau, VMC.</p></div>
+    </div>
+    <div class="argument"><b>Une liste claire, sans blabla.</b> Le client sait tout de suite si vous faites ce qu'il cherche. Chaque ligne aide aussi Google à vous montrer sur les bonnes recherches. On garde seulement ce que vous proposez vraiment (borne de recharge, VMC…).</div>
+  </div>
+</section>
+
+<section class="norme section-dessinee" id="norme">
+  <svg class="dessin cache-mobile" style="width:40px;bottom:40px;left:30px"><use href="#dessin-disjoncteur"/></svg>
+  <div class="conteneur">
+    <div>
+      <p class="surtitre">Outil pratique</p>
+      <h2>Combien de prises dans ma pièce&nbsp;?</h2>
+      <p style="color:#454b50">La norme NF C 15-100 fixe un minimum par pièce dans un logement neuf ou entièrement rénové. Choisissez la pièce pour voir les repères.</p>
+      <div class="pieces" role="group" aria-label="Choisir une pièce">
+        <button type="button" data-piece="sejour" aria-pressed="true"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/></svg>Séjour</button>
+        <button type="button" data-piece="chambre"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18V6M3 13h18v5M21 13a3 3 0 0 0-3-3h-7v3"/><circle cx="7" cy="10" r="1.6"/></svg>Chambre</button>
+        <button type="button" data-piece="cuisine"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16"/><circle cx="12" cy="15" r="3"/><path d="M8 6h.01M12 6h.01"/></svg>Cuisine</button>
+        <button type="button" data-piece="sdb"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg>Salle de bain</button>
+        <button type="button" data-piece="entree"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3 21h18"/><circle cx="15" cy="12" r=".9"/></svg>Entrée, couloir</button>
+        <button type="button" data-piece="wc"><svg class="icone-piece" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h4v8H7zM5 11h14a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6z"/><path d="M9 17l-1 4h8l-1-4"/></svg>WC</button>
+      </div>
+      <label class="curseur" id="zone-surface"><span>Surface du séjour : <b id="valeur-surface">24 m²</b></span>
+        <input type="range" id="surface" min="10" max="60" value="24" step="1"></label>
+    </div>
+    <div class="tableau-norme" aria-live="polite">
+      <div id="titre-piece" style="font:700 22px var(--police-titre)">Séjour</div>
+      <div class="compteurs">
+        <div class="compteur"><div class="valeur" id="nb-prises">6</div><div class="nom">prises minimum</div></div>
+        <div class="compteur"><div class="valeur" id="nb-points">1</div><div class="nom">point lumineux au plafond</div></div>
+      </div>
+      <ul id="details"></ul>
+      <small>Repères simplifiés de la norme NF C 15-100. Le nombre exact se valide lors de la visite.</small>
+    </div>
+    <div class="argument" style="grid-column:1/-1"><b>Montrer que vous connaissez la norme, sans jargon.</b> Le particulier qui rénove se pose exactement cette question. Il joue avec l'outil, comprend que c'est encadré, et voit que vous savez de quoi vous parlez.</div>
+  </div>
+</section>
+
+</main>
+
+<section class="faq" id="faq"><div class="conteneur">
+  <div class="revele"><p class="surtitre">Questions fréquentes</p><h2>Ce qu'on me demande souvent</h2><div class="argument"><b>Des réponses claires montrent que vous maîtrisez votre métier.</b> Et chaque question est une recherche Google réelle : « borne de recharge circuit dédié », « norme NF C 15-100 »…</div></div>
+  <div class="faq-liste revele"><details><summary>C'est quoi, la norme NF C 15-100 ?</summary><p>C'est la norme qui encadre les installations électriques des logements en France : nombre de prises, protections, circuits dédiés, règles dans la salle de bain. Une installation neuve ou entièrement rénovée doit la respecter.</p></details><details><summary>À quoi sert un interrupteur différentiel ?</summary><p>Il coupe le courant dès qu'il détecte une fuite, par exemple si quelqu'un touche un fil abîmé. C'est la protection qui évite les électrocutions, et elle est obligatoire dans un tableau aux normes.</p></details><details><summary>Faut-il un circuit à part pour une borne de recharge ?</summary><p>Oui. Une borne de recharge doit avoir son propre circuit avec sa protection. Selon votre tableau et votre abonnement, il faut parfois adapter l'installation : on le vérifie avant.</p></details><details><summary>Combien de temps pour refaire l'électricité d'un logement ?</summary><p>Ça dépend de la surface et de l'existant : quelques jours pour un petit appartement, davantage pour une maison. Le planning est précisé dans le devis.</p></details></div>
+</div></section><section class="devis" id="contact"><div class="conteneur">
+  <div class="revele">
+    <p class="surtitre">Contact</p>
+    <h2>Un projet ou une panne ?</h2>
+    <p class="intro">Expliquez-moi votre besoin, je vous rappelle pour convenir d'un passage et d'un devis.</p>
+    <ul class="coordonnees"><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><div><small>Téléphone</small><span class="a-completer">Votre numéro ici</span></div></li><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 16h6"/></svg><div><small>E-mail</small><span class="a-completer">contact@mmelecservices.fr</span></div></li><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><small>Secteur</small>Angers et environs</div></li></ul>
+    <div class="argument"><b>Un mail pro à votre nom de domaine</b>, comme contact@mmelecservices.fr, fait tout de suite plus sérieux qu'une adresse Gmail sur un devis.</div>
+  </div>
+  <div class="formulaire revele" id="formulaire-devis">
+    <form>
+      <h3>Demande de devis</h3>
+      <p class="sous-titre">Sans engagement. Je vous recontacte pour en parler.</p>
+      <div class="formulaire-grille">
+        <label>Nom<input name="nom" autocomplete="name" placeholder="Votre nom" required></label>
+        <label>Téléphone<input name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
+        <label>Ville<input name="ville" value="Angers" autocomplete="address-level2"></label>
+        <label>Type de travaux<select name="travaux"><option>Installation neuve</option><option>Rénovation</option><option>Tableau électrique</option><option>Dépannage</option><option>Borne de recharge</option><option>Autre</option></select></label>
+        <label class="pleine">Votre projet<textarea name="message" placeholder="Surface, pièce concernée, délai souhaité…"></textarea></label>
+      </div>
+      <button class="bouton-envoyer" type="submit">Envoyer ma demande →</button>
+      <p class="mention-form">Vos coordonnées servent uniquement à vous recontacter au sujet de votre demande.</p>
+    </form>
+    <div class="confirmation" role="status"><div class="coche">✓</div><h3>Merci, c'est envoyé !</h3>
+      <p>Ici, c'est une démonstration : une fois le site en ligne, cette demande arrivera directement dans la boîte mail de MM Elec Services.</p></div>
+  </div>
+</div></section>
+<section class="offre-mj" aria-label="Proposition MJ Solution Informatique"><div class="conteneur-mj">
+  <div>
+    <span class="etiquette">Maquette réalisée pour vous</span>
+    <h2>Ce site peut être le vôtre, en ligne d'ici quelques jours.</h2>
+    <p>Bonjour, nous sommes Théo et Kelly, de MJ Solution Informatique à Angers. Nous avons préparé cette maquette pour MM Elec Services, sans engagement de votre part.</p>
+    <p>On l'ajuste ensemble avec vos photos de chantier, votre numéro et vos prestations exactes, puis nous la mettons en ligne.</p>
+    <div class="actions">
+      <a class="principal" href="tel:+33761818353">📞 Nous appeler · 07 61 81 83 53</a>
+      <a class="secondaire" href="mailto:contact@mjinformatique.fr?subject=Site%20internet%20pour%20MM%20Elec%20Services">✉️ Écrire un e-mail</a>
+    </div>
+    <div class="signature"><span>MJ</span><span>Théo et Kelly · MJ Solution Informatique, Angers<br>contact@mjinformatique.fr</span></div>
+  </div>
+  <ul class="inclus">
+    <li><span>Votre propre adresse, par exemple <b>mmelecservices.fr</b>, enregistrée à votre nom</span></li>
+    <li><span>Un site lisible sur téléphone, tablette et ordinateur</span></li>
+    <li><span>Pensé pour être trouvé sur Google quand on cherche votre métier à Angers</span></li>
+    <li><span>Votre numéro cliquable et un formulaire de devis qui arrive dans vos mails</span></li>
+    <li><span>Vous restez propriétaire du site</span></li>
+    <li><span>Des modifications ponctuelles quand vous en avez besoin</span></li>
+  </ul>
+</div></section>
+<footer class="pied"><div class="conteneur">
+  <div class="pied-grille">
+    <div><p class="nom-pied">MM Elec Services</p><p>Installation, rénovation et dépannage électrique à Angers et dans les environs.</p></div>
+    <div><h4>Navigation</h4><ul><li><a href="#prestations">Prestations</a></li><li><a href="#norme">Combien de prises ?</a></li><li><a href="#faq">Questions fréquentes</a></li><li><a href="#contact">Demander un devis</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>EURL MM Elec Services</li><li>Angers (49)</li><li><span class="a-completer">Votre numéro ici</span></li></ul></div>
+  </div>
+  <div class="pied-bas"><span>© <span class="annee"></span> MM Elec Services · EURL au capital de 2 000 € · RCS Angers 108 087 800</span><span><a href="#haut">Mentions légales</a> · Site réalisé par <a href="mailto:contact@mjinformatique.fr">MJ Solution Informatique</a>, Angers</span></div>
+</div></footer>
+<div class="barre-mobile"><a class="appel" href="#contact"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a><a class="devis-lien" href="#formulaire-devis"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 16h6"/></svg>Devis</a></div>
+<script>
+// Bouton « Pourquoi ce site ? » : affiche ou masque les arguments
+(function(){
+  const bouton=document.querySelector('.bouton-pourquoi');
+  if(bouton)bouton.addEventListener('click',()=>{
+    const actif=document.body.classList.toggle('mode-presentation');
+    bouton.textContent=actif?'Masquer les explications':'Pourquoi ce site ?';
+    bouton.setAttribute('aria-pressed',actif);
+    if(actif){const premier=document.querySelector('.argument');if(premier)premier.scrollIntoView({behavior:'smooth',block:'center'});}
+  });
+  document.querySelectorAll('.annee').forEach(e=>e.textContent=new Date().getFullYear());
+
+  // Apparition douce des blocs au défilement
+  const aReveler=document.querySelectorAll('.revele');
+  if('IntersectionObserver' in window){
+    const observateur=new IntersectionObserver(entrees=>entrees.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');observateur.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+    aReveler.forEach(el=>observateur.observe(el));
+  } else aReveler.forEach(el=>el.classList.add('vu'));
+
+  // Formulaire de devis (démo : rien n'est envoyé)
+  const formulaire=document.querySelector('.formulaire form');
+  if(formulaire)formulaire.addEventListener('submit',e=>{
+    e.preventDefault();
+    const prenom=(formulaire.querySelector('[name=nom]').value||'').trim().split(' ')[0];
+    document.querySelector('.confirmation h3').textContent=prenom?'Merci '+prenom+', c\'est envoyé !':'Merci, c\'est envoyé !';
+    formulaire.closest('.formulaire').classList.add('envoye');
+  });
+})();
+
+
+// Repères NF C 15-100 par pièce
+const pieces={
+  sejour:{nom:'Séjour',surface:true,prises:s=>Math.max(5,Math.ceil(s/4)),points:1,
+    details:s=>['1 prise par tranche de 4 m², au moins 5',"1 prise télévision et 1 prise réseau (RJ45) au minimum"]},
+  chambre:{nom:'Chambre',prises:()=>3,points:1,details:()=>['3 prises au minimum','1 prise réseau (RJ45) recommandée']},
+  cuisine:{nom:'Cuisine',prises:()=>6,points:1,
+    details:()=>['6 prises dont 4 au-dessus du plan de travail','Circuits dédiés : plaque de cuisson, four, lave-vaisselle']},
+  sdb:{nom:'Salle de bain',prises:()=>1,points:1,
+    details:()=>['1 prise au minimum, placée hors des volumes autour de la baignoire ou de la douche','Lave-linge sur circuit dédié s\'il est dans la pièce']},
+  entree:{nom:'Entrée, couloir',prises:()=>1,points:1,details:()=>['1 prise au minimum','Commande de l\'éclairage à chaque accès']},
+  wc:{nom:'WC',prises:()=>0,points:1,details:()=>['Pas de prise exigée','1 point lumineux']},
+};
+let pieceActive='sejour';
+const curseur=document.getElementById('surface');
+function majNorme(){
+  const p=pieces[pieceActive], s=+curseur.value;
+  document.getElementById('zone-surface').style.display=p.surface?'grid':'none';
+  document.getElementById('valeur-surface').textContent=s+' m²';
+  document.getElementById('titre-piece').textContent=p.nom+(p.surface?' de '+s+' m²':'');
+  document.getElementById('nb-prises').textContent=p.prises(s);
+  document.getElementById('nb-points').textContent=p.points;
+  document.getElementById('details').innerHTML=p.details(s).map(d=>`<li>${d}</li>`).join('');
+}
+document.querySelectorAll('.pieces button').forEach(b=>b.addEventListener('click',()=>{
+  pieceActive=b.dataset.piece;
+  document.querySelectorAll('.pieces button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  majNorme();
+}));
+curseur.addEventListener('input',majNorme);
+majNorme();
+</script>
+</body>
+</html>
